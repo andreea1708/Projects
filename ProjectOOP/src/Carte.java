@@ -33,12 +33,12 @@ public class Carte {
     }
     public String toString(){
         sb=new StringBuffer();
-        sb.append("Autorul: "+autor+"\n");
-        sb.append("Titlu: "+titlu+"\n");
-        sb.append("Anul aparitiei: "+anAparitiei+"\n");
-        sb.append("Numaru de pagini: "+nrPag+"\n");
-        sb.append("Pretul: "+price+"\n");
-        sb.append("Perioada de livrare: "+perioadaDeLivrare+" ore\n");
+        sb.append("Author: "+autor+"\n");
+        sb.append("Title: "+titlu+"\n");
+        sb.append("Year of publication: "+anAparitiei+"\n");
+        sb.append("Number of pages: "+nrPag+"\n");
+        sb.append("Price: "+price+"\n");
+        sb.append("Delivery period: "+perioadaDeLivrare+" ore\n");
         return sb.toString();
     }
 }
