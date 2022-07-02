@@ -15,24 +15,24 @@ public class Card extends JFrame{
     private int lunaCurenta;
     private int lunaScrisa;
     public Card(){
-        this.setTitle("Plata cu cardul");
+        this.setTitle("Payment by card");
         this.setLayout(new GridLayout(5,2,10,10));
         
-        this.add(new JLabel("Tipul cartii: "));
+        this.add(new JLabel("Card type: "));
         box1= new JComboBox(tip);
         add(box1);
-        this.add(new JLabel("Numarul cartii (Te rog sa introduci ultimele 4 numere): "));
+        this.add(new JLabel("Card number (Please enter the last 4 numbers): "));
         txt1=new JTextField(16);
         add(txt1);
         
-        this.add(new JLabel("Data: Luna (Te rog scrie luna in cifre (1-12): "));
+        this.add(new JLabel("Date: Moon Please write the moon in numbers (1-12): "));
         txt2= new JTextField(5);
         add(txt2);
-        this.add(new JLabel("Anul (Te rog scrie anul de forma yy): "));
+        this.add(new JLabel("Year (Please write the year in the form yy): "));
         txt3= new JTextField(5);
         add(txt3);
         
-        btn=new JButton("Plateste");
+        btn=new JButton("Checkout");
         add(btn);
         
         setSize(800,250);
@@ -47,18 +47,18 @@ public class Card extends JFrame{
                     anCurent = (dataCurenta.getYear())%100;
                     
                     if(txt1.getText().equals("") || txt2.getText().equals("") || txt3.getText().equals(""))
-                        JOptionPane.showMessageDialog(null,"Trebuie sa introduci toate datele!","Date invalide",JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null,"You must enter all the data!","Invalid data",JOptionPane.ERROR_MESSAGE);
                     else
                     {
                     if(anCurent<anScris)
                     {
                        
-                        JOptionPane.showMessageDialog(null, "Plata finalizata!");
+                        JOptionPane.showMessageDialog(null, "Payment completed!");
                     }
                     else
                     {
                         if(anCurent>anScris)
-                            JOptionPane.showMessageDialog(null,"Cardul nu este valid!","Eroare",JOptionPane.ERROR_MESSAGE);
+                            JOptionPane.showMessageDialog(null,"The card is not valid!","Error",JOptionPane.ERROR_MESSAGE);
                         else
                         {
                             if(anCurent==anScris)
@@ -67,11 +67,11 @@ public class Card extends JFrame{
                                 lunaScrisa = Integer.parseInt(txt2.getText());
                                 
                                 if(lunaCurenta>=lunaScrisa)
-                                    JOptionPane.showMessageDialog(null,"Cardul nu este valid!","Eroare",JOptionPane.ERROR_MESSAGE);
+                                    JOptionPane.showMessageDialog(null,"The card is not valid!","Error",JOptionPane.ERROR_MESSAGE);
                                 else
                                 {
                                     if(lunaCurenta<lunaScrisa)
-                                        JOptionPane.showMessageDialog(null, "Plata finalizata!");
+                                        JOptionPane.showMessageDialog(null, "Payment completed!");
                                 }      
                                 
                             }
