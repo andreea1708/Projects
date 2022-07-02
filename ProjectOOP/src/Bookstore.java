@@ -10,14 +10,14 @@ public  class Bookstore extends JFrame {
     private JButton b1,b2;
     private BufferedReader reader;
     public Bookstore(){
-        this.setTitle("Bun venit!");
+        this.setTitle("Welcome!");
          this.setLayout(new GridLayout(3,2,10,10));
         
          this.add(new JLabel("Username"));
         t1=new JTextField(10);
         add(t1);
         
-         this.add(new JLabel("Parola"));
+         this.add(new JLabel("Password"));
         t2=new JPasswordField(15);
         add(t2);
         
@@ -41,14 +41,14 @@ public  class Bookstore extends JFrame {
                     {
                        if((t1.getText().equals(Register.username)&&t2.getText().equals(Register.parola)) || (line.equals(t1.getText()) && line2.equals(t2.getText())))
                             {       
-                                JOptionPane.showMessageDialog(null,"Te-ai logat!","login",JOptionPane.INFORMATION_MESSAGE);
+                                JOptionPane.showMessageDialog(null,"TYou're logged in!","login",JOptionPane.INFORMATION_MESSAGE);
                                 dispose();  
                                  new ListaCarti();
                             }
                      
                         else
                             {
-                                JOptionPane.showMessageDialog(null, "Nu sunteti abonat!");
+                                JOptionPane.showMessageDialog(null, "You are not a subscriber!");
                             } 
                     }
                 }catch (IOException a){
