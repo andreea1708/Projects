@@ -41,7 +41,7 @@ public  class Bookstore extends JFrame {
                     {
                        if((t1.getText().equals(Register.username)&&t2.getText().equals(Register.parola)) || (line.equals(t1.getText()) && line2.equals(t2.getText())))
                             {       
-                                JOptionPane.showMessageDialog(null,"TYou're logged in!","login",JOptionPane.INFORMATION_MESSAGE);
+                                JOptionPane.showMessageDialog(null,"You're logged in!","login",JOptionPane.INFORMATION_MESSAGE);
                                 dispose();  
                                  new ListaCarti();
                             }
