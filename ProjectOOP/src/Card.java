@@ -25,7 +25,7 @@ public class Card extends JFrame{
         txt1=new JTextField(16);
         add(txt1);
         
-        this.add(new JLabel("Date: Moon Please write the moon in numbers (1-12): "));
+        this.add(new JLabel("Date: Please write the month in numbers (1-12): "));
         txt2= new JTextField(5);
         add(txt2);
         this.add(new JLabel("Year (Please write the year in the form yy): "));
