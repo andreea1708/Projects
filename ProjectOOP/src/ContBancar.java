@@ -6,18 +6,18 @@ public class ContBancar extends JFrame{
     private JButton btn1;
     private String numar;
     public ContBancar(){
-        this.setTitle("Plata cu cardul");
+        this.setTitle("Payment by card");
         this.setLayout(new GridLayout(3,2,10,10));
         
-        this.add(new JLabel("Numele bancii: "));
+        this.add(new JLabel("Bank name: "));
         txt1=new JTextField(16);
         add(txt1);
         
-        this.add(new JLabel("Numarul contului: "));
+        this.add(new JLabel("The account number: "));
         txt2= new JTextField(5);
         add(txt2);
         
-        btn1=new JButton("Plateste");
+        btn1=new JButton("Checkout");
         add(btn1);
         
         setSize(250,150);
@@ -29,17 +29,17 @@ public class ContBancar extends JFrame{
             public void actionPerformed(ActionEvent e){
                     numar=txt2.getText();
                     if(txt1.getText().equals("") || txt2.getText().equals(""))
-                        JOptionPane.showMessageDialog(null,"Trebuie sa introduci toate datele!","Date invalide",JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null,"You must enter all the data!","Invalid data",JOptionPane.ERROR_MESSAGE);
                     else
                     {
                     if(numar.length()==16)
                     {  
-                        JOptionPane.showMessageDialog(null, "Plata finalizata! ");
+                        JOptionPane.showMessageDialog(null, "Payment completed! ");
                        
                      }
                             
                     else
-                        JOptionPane.showMessageDialog(null, "Introduceti datele corect!");
+                        JOptionPane.showMessageDialog(null, "Enter the data correctly!");
                     }
             }    
         });
