@@ -16,28 +16,25 @@ public class Register extends JFrame{
     public Register(){
         this.setTitle("Register");
         this.setLayout(new GridLayout(9,2,10,10));
-        this.add(new JLabel("Nume"));
+        this.add(new JLabel(""));
         t3=new JTextField(10);
         add(t3);
         
-        this.add(new JLabel("Prenume"));
+        this.add(new JLabel("Surname"));
         t5=new JTextField(10);
         add(t5);
         
         
-        this.add(new JLabel(" Adresa postala:  Strada: "));
+        this.add(new JLabel(" Postal address: Street: "));
         t4=new JTextField();
         add(t4);
-        this.add(new JLabel(" Bloc: "));
+        this.add(new JLabel(" Block: "));
         t6=new JTextField();
         add(t6);
-        this.add(new JLabel(" Scara: "));
-        t7=new JTextField();
-        add(t7);
-        this.add(new JLabel(" Apartament: "));
+        this.add(new JLabel(" Apartment: "));
         t8=new JTextField();
         add(t8);
-        this.add(new JLabel(" Cod postal: "));
+        this.add(new JLabel(" Postal code: "));
         t9=new JTextField();
         add(t9);
         
@@ -45,7 +42,7 @@ public class Register extends JFrame{
         b3=new JButton("Login");
         add(b3);
        
-        JOptionPane.showMessageDialog(null,"In cazul in care la introducerea datelor nu aveti ce completa, va rog sa scrieti \'-\'");
+        JOptionPane.showMessageDialog(null,"If you do not have anything to enter when entering the data, please write \'-\'");
         
         setSize(600,350);
         setLocationRelativeTo(null);
@@ -54,8 +51,8 @@ public class Register extends JFrame{
         
         b3.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-              if(t3.getText().equals("") || t4.getText().equals("") || t5.getText().equals("")|| t6.getText().equals("")|| t7.getText().equals("")|| t8.getText().equals("")|| t9.getText().equals(""))
-                  JOptionPane.showMessageDialog(null,"Trebuie sa introduci toate datele!","Date invalide",JOptionPane.ERROR_MESSAGE);
+              if(t3.getText().equals("") || t4.getText().equals("") || t5.getText().equals("")|| t6.getText().equals("")|| t8.getText().equals("")|| t9.getText().equals(""))
+                  JOptionPane.showMessageDialog(null,"You must enter all the data!","Invalid data",JOptionPane.ERROR_MESSAGE);
               else
               { 
                   if(t9.getText().length() == 6){
@@ -107,7 +104,7 @@ public class Register extends JFrame{
                     }
                     
                     else
-                        JOptionPane.showMessageDialog(null,"Incearca sa introduci datele corect!","Date invalide",JOptionPane.ERROR_MESSAGE);
+                        JOptionPane.showMessageDialog(null,"Try to enter the data correctly!","Invalid data",JOptionPane.ERROR_MESSAGE);
               }
               
     }
