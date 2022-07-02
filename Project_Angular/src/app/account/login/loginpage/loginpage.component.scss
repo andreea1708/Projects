@@ -1,0 +1,27 @@
+#container_centrat{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #181818;
+}
+
+.container_bun_venit{
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+.rand-butoane{
+  display: inline;
+}
+
+.buton-custom {
+  width: 110px;
+}
+
+mat-card{
+  background-color: rgb(114, 26, 141);
+}
